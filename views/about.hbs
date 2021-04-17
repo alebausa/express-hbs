@@ -1,0 +1,18 @@
+<h1>This is my about page</h1>
+<p>Nombre: {{name}}</p>
+{{#if age}}
+<p>Age: {{age}}</p>
+{{else}}
+<p>Age unknown</p>
+{{/if}}
+<p>Job: {{job}}</p>
+{{ grettings language=en }}
+<p>I love doing:</p>
+<ul>
+  {{#each hobbies}}
+  <li>
+    {{> card this }}
+  </li>
+  {{/each}}
+</ul>
+{{> card }}
